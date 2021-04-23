@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorStartUpText"
+        android:text="Input a 6 digit Pin for future payment."
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/SignUpTextLayouts"
+            android:id="@+id/tb_signup_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payment Password"
+            app:counterMaxLength="6"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/SignUpEditTextsTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:digits="0123456789"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/SignUpTextLayouts"
+            android:id="@+id/tb_signup_re_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Enter Payment Password again"
+            app:counterMaxLength="6"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/SignUpEditTextsTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:digits="0123456789"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/ButtonTheme"
+        android:id="@+id/btn_signup_continue"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginHorizontal="80dp"
+        android:text="Continue"
+        android:clickable="false"
+        android:checkable="false"
+        android:textColor="#8DA5A5"
+        android:backgroundTint="@color/colorBackgroundEnd"
+        />
+
+</FrameLayout>

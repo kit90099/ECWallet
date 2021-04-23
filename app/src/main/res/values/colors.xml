@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#93ecec</color>
+    <color name="colorPrimaryDark">#93ecec</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBackgroundStart">#93ecec</color>
+    <color name="colorBackgroundEnd">#24c9c9</color>
+    <color name="colorStartUpText">#E8FAFA</color>
+    <color name="colorComponentsGradientBackground">#E8FAFA</color>
+    <color name="colorComponentBackground">#56D1D1</color>
+    <color name="colorDivider">#1E000000</color>
+</resources>

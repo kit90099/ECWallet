@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.bc.ecwallet.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_startUpFragment"
+            app:destination="@id/StartUpFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/StartUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_receiveInfoFragment"
+            app:destination="@id/receiveInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StartUpFragment"
+        android:name="com.bc.ecwallet.StartUpFragment"
+        android:label="fragment_startup"
+        tools:layout="@layout/fragment_startup">
+        <action
+            android:id="@+id/action_startUpFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_StartUpFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/StartUpFragment" />
+        <action
+            android:id="@+id/action_StartUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/StartUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.bc.ecwallet.SignUpFragment"
+        android:label="fragment_sign_up_p1"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bc.ecwallet.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bc.ecwallet.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.bc.ecwallet.PaymentFragment"
+        android:label="PaymentFragment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_payGestureFragment"
+            app:destination="@id/payGestureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payGestureFragment"
+        android:name="com.bc.ecwallet.PayGestureFragment"
+        android:label="PayGestureFragment" >
+        <argument
+            android:name="payee"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="float" />
+        <argument
+            android:name="paymentPassword"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_payGestureFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveInfoFragment"
+        android:name="com.bc.ecwallet.ReceiveInfoFragment"
+        android:label="ReceiveInfoFragment" >
+        <action
+            android:id="@+id/action_receiveInfoFragment_to_receiveGestureFragment"
+            app:destination="@id/receiveGestureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveGestureFragment"
+        android:name="com.bc.ecwallet.ReceiveGestureFragment"
+        android:label="ReceiveGestureFragment" >
+        <argument
+            android:name="transactionId"
+            app:argType="string" />
+        <argument
+            android:name="payer"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_receiveGestureFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

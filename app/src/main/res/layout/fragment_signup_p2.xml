@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorStartUpText"
+        android:text="How do your friend call you?"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/SignUpTextLayouts"
+        android:id="@+id/tb_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nickname"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/SignUpEditTextsTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/ButtonTheme"
+        android:id="@+id/btn_signup_continue"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginHorizontal="80dp"
+        android:text="Continue"
+        android:clickable="false"
+        android:checkable="false"
+        android:textColor="#8DA5A5"
+        android:backgroundTint="@color/colorBackgroundEnd"
+        />
+
+</FrameLayout>

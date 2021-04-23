@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SignUpFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Please check your mailbox and enter the verification code received."
+        android:textColor="@color/colorStartUpText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tb_signup"
+        style="@style/SignUpTextLayouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Verification code"
+        app:counterMaxLength="6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/SignUpEditTextsTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:maxLength="6" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signup_continue"
+        style="@style/ButtonTheme"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginHorizontal="80dp"
+        android:backgroundTint="@color/colorBackgroundEnd"
+        android:checkable="false"
+        android:clickable="false"
+        android:text="Continue"
+        android:textColor="#8DA5A5" />
+
+</FrameLayout>

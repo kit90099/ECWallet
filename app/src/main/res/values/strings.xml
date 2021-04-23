@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ECWallet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test">test</string>
+    <string name="user_name">user_name</string>
+    <string name="user_pw">user_pw</string>
+    <string name="startup_text_size">15dp</string>
+
+
+</resources>
